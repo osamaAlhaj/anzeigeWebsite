@@ -1,0 +1,8 @@
+#guestbook_entries article {
+    margin: 3px 3px 13px 3px;
+    border: solid 1px darkblue;
+}
+#guestbook_entries address, #guestbook_entries time {
+    display: inline;
+    margin-right: 5px;
+}
