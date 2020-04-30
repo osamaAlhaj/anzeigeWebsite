@@ -10,23 +10,25 @@ app.get("/api/entry", async function (req, res) {
     try {
         const result = await pool.query("SELECT * FROM entry ORDER BY created DESC");
         res.json(result);
+
+        
     }
-    catch(err) {
+    catch (err) {
         console.error(err);
         res.status(500).end();
     }
 });
 
-app.post("/api/entry", async function(req, res) {
-    try{
+app.post("/api/entry", async function (req, res) {
+    try {
         const entry = req.body;
         await pool.query(
-            "INSERT INTO entry (name, text) VALUES (?, ?)",
+            "INSERT INTO entry (name, text,) VALUES (?, ?)",
             [entry.name, entry.text]
         );
         res.status(201).end();
     }
-    catch(err) {
+    catch (err) {
         console.error(err);
         res.status(500).end();
     }
