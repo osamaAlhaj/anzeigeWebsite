@@ -8,5 +8,18 @@
     "express": "^4.17.1",
     "jquery": "^3.5.0",
     "mariadb": "^2.3.1"
-  }
+  },
+  "description": "* MariaDB should be running and accessible as configured in `db.js`\r * run `npm install` to download dependencies\r * run `node app.js` to start",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osamaAlhaj/anzeigeWebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osamaAlhaj/anzeigeWebsite/issues"
+  },
+  "homepage": "https://github.com/osamaAlhaj/anzeigeWebsite#readme"
 }
