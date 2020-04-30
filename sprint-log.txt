@@ -1,0 +1,41 @@
+1. User Story
+# Datenbank (evtl. schon fertig durch mariaDB Pool)
+Title (80 Zeichen), Beschreibungstext, Name, Ort, Preis, Verhandlungsbasis (Ja/Nein), Kontaktmoeglichkeit
+# HTML Startseite
+index.html in public ausbauen
+- Input Feld fuer Anzeigentitel
+- Input Field fuer Text
+- Input field Name
+- Input field mit Ort
+- Input Preis
+- Radio Button Verhandlungsbasis
+- Kontakt Input
+# CSS Stylen
+# Felder auslesen und in Datenbank als neue Anzeige speichern
+- Datum der erstellen Anzeige
+
+2. User Story
+- Container auf der Index.html
+- Liste mit den aktuellsten 20 Datenbankeintraegen
+- Jede Anzeige mit Titel und die ersten 100 Zeichen des Becshreibungstextes
+
+3. User Story Feature fuer 2 - Optional
+- Bei Klick auf Anzeige aus Liste gibt es mehr Informationen auf neuer URL
+- URLs generieren wir auf Basis der Anzeigen ID (Lesson mit APIs)
+- Alter der Anzeige mit Anzeigen
+
+#########SUCHE###########
+4. User Story
+- Startseite benoetigt ein Such-Input Feld fuer den Ort
+- Lesson API
+
+5. User Story
+- Suchbegriff im Titel vorhanden und Anzeigen ausgeben.
+#########SUCHE###########
+
+6. User Story
+- Die Top 5 Orte mit meisten Anzeigen
+- Jeder Ort ist klickbar. Nach klick werden alle Anzeigen zu dem Ort angezeigt.
+
+7. User Story
+- 
