@@ -21,6 +21,16 @@ $( document ).ready(() => {
 
     loadEntries().then(entries => showEntries(entries));
 
+    $("ul li").click(function(){
+        let tab_id = $(this).attr("data-tab");
+
+        $("ul.switch-tabs-list li").removeClass("active");
+        $(".note-content-container").removeClass("active");
+
+        $(this).addClass("active");
+        $("#"+tab_id).addClass("active");
+    });
+
     function submitEntry(entry) {
         const headers = { 'Content-Type': 'application/json' };
         return fetch('/api/entry', { method: 'POST', headers, body: JSON.stringify(entry) });

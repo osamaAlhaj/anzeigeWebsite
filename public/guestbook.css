@@ -24,13 +24,16 @@ h1 {
     border: none;
     padding: 0px 50px 0px 20px;
 }
-.header-container button {
+.search-button{
     border-radius: 2px;
     height: 2rem;
     border: none;
     background-color: #00a591;
     color: white;
     width: 100px;
+}
+.search-button:hover{
+    cursor: pointer;
 }
 
 
@@ -62,6 +65,7 @@ h1 {
 }
 .top-locations-content:hover{
     box-shadow: 3px 3px 12px rgba(42,47,54,.3);
+    border-radius: 2px;
     cursor: pointer;
     color: #00a591;
 }
@@ -76,7 +80,7 @@ h1 {
     border-radius: 2px;
     transition: 0.2s ease-in-out;
 }
-.ui-tabs-active{
+.ui-tabs.active{
     background-color: #00a591;
     color: white;
 }
@@ -88,11 +92,56 @@ h1 {
 }
 .switch-tabs{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    margin-top: 30px;
+}
+.note-content-container.active{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
 }
 .note-content-container{
+    display: none;
+}
+.note-content-note-box{
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 15px;
+    width: 20%;
+    margin: 5px;
+}
+.note-input-container{
+    display: none;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.note-input-container.active{
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 100px;
+}
+#guestbook_form{
+    display: flex;
+    flex-direction: column;
+}
+.note_input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 3px 3px 12px rgba(42,47,54,.3);
+}
+button.note_input:hover{
+    background-color: #00a591;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+button.note_input{
+    padding: 20px;
+    font-size: 1.3rem;
 }
