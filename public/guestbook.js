@@ -8,12 +8,13 @@ $(document).ready(() => {
         $('#tab-1').empty();
         for (const e of entries) {
             const el = $('<div class="note-content-note-box"></div>');
-            const name = $('<address class="author"></address>').text(e.name);
-            const dateString = new Date(e.created).toLocaleString();
-            const date = $('<time></time>', { datetime: e.created }).text(dateString);
+            const name = $('<h3></h3>').text(e.title);
+            //const dateString = new Date(e.created).toLocaleString();
+            //const date = $('<time></time>', { datetime: e.created }).text(dateString);
             const text = $('<section></section>').text(e.text.substr(0, 100));
 
-            el.append(name).append(date).append(text);
+            //apend(date) entfernt
+            el.append(name).append(text);
 
             $('#tab-1').append(el);
         }
