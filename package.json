@@ -11,6 +11,10 @@
   },
   "description": "* MariaDB should be running and accessible as configured in `db.js`\r * run `npm install` to download dependencies\r * run `node app.js` to start",
   "version": "1.0.0",
+<<<<<<< HEAD
+  "devDependencies": {},
+=======
+>>>>>>> e0920ecafbc8bb422387538b4e2e386411c27663
   "repository": {
     "type": "git",
     "url": "git+https://github.com/osamaAlhaj/anzeigeWebsite.git"

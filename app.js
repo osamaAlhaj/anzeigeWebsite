@@ -1,3 +1,7 @@
+//Starten des Webservers 
+//Einbdung der Routen
+//SQL req und SQL res
+
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -8,18 +12,28 @@ const pool = require('./db').pool;
 
 app.get("/api/entry", async function (req, res) {
     try {
-        const result = await pool.query("SELECT * FROM entry ORDER BY created DESC");
+        const result = await pool.query(`
+        SELECT * FROM entry 
+        WHERE DATEDIFF(NOW(),created)<=14
+        ORDER BY created DESC
+        LIMIT 20`);
         res.json(result);
+        console.log(result);
     }
-    catch(err) {
+    catch (err) {
         console.error(err);
         res.status(500).end();
     }
 });
 
+<<<<<<< HEAD
+app.post("/api/entry", async function (req, res) {
+    try {
+=======
 app.post("/api/entry", async function(req, res) {
     try{
     
+>>>>>>> febbceff0a3bc83a19bf028a61a32333a3f5c032
         const entry = req.body;
         await pool.query(
             "INSERT INTO entry (name, text,title,location,price,email) VALUES (?, ?, ?, ?, ?, ?)",
@@ -27,7 +41,7 @@ app.post("/api/entry", async function(req, res) {
         );
         res.status(201).end();
     }
-    catch(err) {
+    catch (err) {
         console.error(err);
         res.status(500).end();
     }

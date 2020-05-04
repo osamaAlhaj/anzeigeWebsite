@@ -15,10 +15,10 @@ pool.query(`CREATE TABLE IF NOT EXISTS entry (
                   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                   PRIMARY KEY(id)
               )`)
-.then(() => console.info('Database initizalied'))
-.catch(err => {
-  console.error('Could not initialize database', err);
-  process.exit();
-});
+  .then(() => console.info('Database initizalied'))
+  .catch(err => {
+    console.error('Could not initialize database', err);
+    process.exit();
+  });
 
 module.exports = { pool };
