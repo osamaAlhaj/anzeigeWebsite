@@ -62,15 +62,15 @@
     </div>
     <div class="note-content-container" id="tab-2">
         <form id="guestbook_form">
-            <input type="text" class="note_input" id="title" placeholder="Title of your Note" maxlength="80">
-            <input type="text" maxlength="255" class="note_input" placeholder="Your Name">
-            <textarea class="note_input" placeholder="Note" cols="55" rows="4"></textarea>
-            <input type="text" class="note_input" id="location" placeholder="Location">
-            <input type="number" class="note_input" id="price" placeholder="Price">
+            <input type="text" name="title" class="note_input" id="title" placeholder="Title of your Note" maxlength="80">
+            <input type="text" name="name" maxlength="255" class="note_input" placeholder="Your Name">
+            <textarea name="text" class="note_input" placeholder="Note" cols="55" rows="4"></textarea>
+            <input type="text" name="location" class="note_input" id="location" placeholder="Location">
+            <input type="number" name="price" class="note_input" id="price" placeholder="Price">
             <p>Negotiable?</p>
             <label>Yes<input type="radio" class="note_input" id="negotiableYes" name="negotiable"></label>
             <label>No<input type="radio" class="note_input" id="negotiableNo" name="negotiable"></label>
-            <input type="email" class="note_input" id="email" placeholder="Your E-Mail Adress">
+            <input type="email" name="email" class="note_input" id="email" placeholder="Your E-Mail Adress">
             <button type="submit" class="note_input">Submit your Note</button>
         </form>
     </div>
