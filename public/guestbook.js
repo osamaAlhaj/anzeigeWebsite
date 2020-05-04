@@ -47,6 +47,7 @@ $( document ).ready(() => {
             const newEntries = await loadEntries();
             showEntries(newEntries);
         }
+        console.log(formData);
     });
 
 });

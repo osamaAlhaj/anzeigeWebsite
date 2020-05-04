@@ -28,7 +28,6 @@ app.get("/api/entry", async function (req, res) {
 
 app.post("/api/entry", async function(req, res) {
     try{
-    
         const entry = req.body;
         await pool.query(
             "INSERT INTO entry (name, text,title,location,price,email) VALUES (?, ?, ?, ?, ?, ?)",
