@@ -26,12 +26,19 @@ app.get("/api/entry", async function (req, res) {
     }
 });
 
+<<<<<<< HEAD
 app.post("/api/entry", async function (req, res) {
     try {
+=======
+app.post("/api/entry", async function(req, res) {
+    try{
+    
+>>>>>>> febbceff0a3bc83a19bf028a61a32333a3f5c032
         const entry = req.body;
         await pool.query(
-            "INSERT INTO entry (name, text) VALUES (?, ?)",
-            [entry.name, entry.text]
+            "INSERT INTO entry (name, text,title,location,price,email) VALUES (?, ?, ?, ?, ?, ?)",
+            [entry.name, entry.text,
+            entry.title, entry.location, entry.price, entry.email]
         );
         res.status(201).end();
     }
