@@ -13,7 +13,7 @@ const pool = require('./db').pool;
 app.get("/api/entry", async function (req, res) {
     try {
         const result = await pool.query(`
-        SELECT * FROM entry 
+        SELECT * FROM entry
         WHERE DATEDIFF(NOW(),created)<=14
         ORDER BY created DESC
         LIMIT 20 
@@ -32,8 +32,7 @@ app.post("/api/entry", async function (req, res) {
         const entry = req.body;
         await pool.query(
             "INSERT INTO entry (name, text,title,location,price,email) VALUES (?, ?, ?, ?, ?, ?)",
-            [entry.name, entry.text,
-            entry.title, entry.location, entry.price, entry.email]
+            [entry.name, entry.text, entry.title, entry.location, entry.price, entry.email]
         );
         res.status(201).end();
     }
