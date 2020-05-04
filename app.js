@@ -13,7 +13,7 @@ const pool = require('./db').pool;
 app.get("/api/entry", async function (req, res) {
     try {
         const result = await pool.query(`
-        SELECT * FROM entry 
+        SELECT * FROM entry
         WHERE DATEDIFF(NOW(),created)<=14
         ORDER BY created DESC
         LIMIT 20`);
