@@ -5,17 +5,18 @@ $( document ).ready(() => {
     }
 
     function showEntries(entries) {
-        $('#guestbook_entries').empty();
+        console.log(entries);
+        $('#tab-1').empty();
         for (const e of entries) {
-            const el = $('<article></article>');
-            const name = $('<address class="author"></address>').text(e.name);
-            const dateString = new Date(e.created).toLocaleString();
-            const date = $('<time></time>', {datetime: e.created}).text(dateString);
-            const text = $('<section></section>').text(e.text);
+            const el = $('<div class="note-content-note-box"></div>');
+            const name = $('<h3></h3>').text(e.title);
+            // const dateString = new Date(e.created).toLocaleString();
+            // const date = $('<time></time>', {datetime: e.created}).text(dateString);
+            const text = $('<section></section>').text(e.text.substr(0,100)+" ...");
 
-            el.append(name).append(date).append(text);
+            el.append(name).append(text);
 
-            $('#guestbook_entries').append(el);
+            $('#tab-1').append(el);
         }
     }
 
