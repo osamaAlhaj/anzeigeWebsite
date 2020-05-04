@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Tamma 2', cursive;
+    color: #484848;
+    background-color: #111F22;
+}
+.header-container{
+    background-image: url("/img/abstract-art-black-background-blur-1040499.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    color: white;
+    font-size: 3rem;
+}
+.top-locations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-locations-header {
+    background: #f8f8f8;
+    margin-top: -90px;
+    padding: 20px 23px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: 0 -12px 10px 0 rgba(167, 167, 167, 0.3);
+    width: 40%;
+    text-align: center;
+}
+.top-location-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.top-locations-content{
+    text-align: center;
+    width: 15%;
+    transition: 0.3s ease-in-out;
+}
+.top-locations-content:hover{
+    box-shadow: 3px 3px 12px rgba(42,47,54,.3);
+    border-radius: 2px;
+    cursor: pointer;
+    color: #00a591;
+}
+.note-addon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.note-addon-value{
+    background: #f8f8f8;
+    padding: 20px 23px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    text-align: center;
+    width: 40%;
+    margin-top: 20px;
+}
