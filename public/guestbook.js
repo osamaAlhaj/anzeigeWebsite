@@ -1,34 +1,34 @@
-$( document ).ready(() => {
+$(document).ready(() => {
 
     function loadEntries() {
         return fetch('/api/entry').then(r => r.json());
     }
 
     function showEntries(entries) {
-        $('#guestbook_entries').empty();
+        $('#tab-1').empty();
         for (const e of entries) {
-            const el = $('<article></article>');
+            const el = $('<div class="note-content-note-box"></div>');
             const name = $('<address class="author"></address>').text(e.name);
             const dateString = new Date(e.created).toLocaleString();
-            const date = $('<time></time>', {datetime: e.created}).text(dateString);
-            const text = $('<section></section>').text(e.text);
+            const date = $('<time></time>', { datetime: e.created }).text(dateString);
+            const text = $('<section></section>').text(e.text.substr(0, 100));
 
             el.append(name).append(date).append(text);
 
-            $('#guestbook_entries').append(el);
+            $('#tab-1').append(el);
         }
     }
 
     loadEntries().then(entries => showEntries(entries));
 
-    $("ul li").click(function(){
+    $("ul li").click(function () {
         let tab_id = $(this).attr("data-tab");
 
         $("ul.switch-tabs-list li").removeClass("active");
         $(".note-content-container").removeClass("active");
 
         $(this).addClass("active");
-        $("#"+tab_id).addClass("active");
+        $("#" + tab_id).addClass("active");
     });
 
     function submitEntry(entry) {
@@ -42,7 +42,7 @@ $( document ).ready(() => {
         const formData = new FormData(event.target);
         const entry = Object.fromEntries(formData.entries());
         const response = await submitEntry(entry);
-        if(response.ok) {
+        if (response.ok) {
             event.target.reset();
             const newEntries = await loadEntries();
             showEntries(newEntries);

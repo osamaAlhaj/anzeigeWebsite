@@ -7,7 +7,8 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jquery": "^3.5.0",
-    "mariadb": "^2.3.1"
+    "mariadb": "^2.3.1",
+    "nodemon": "^2.0.3"
   },
   "description": "* MariaDB should be running and accessible as configured in `db.js`\r * run `npm install` to download dependencies\r * run `node app.js` to start",
   "version": "1.0.0",
