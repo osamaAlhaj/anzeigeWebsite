@@ -5,7 +5,7 @@ body{
     color: #484848;
 }
 .header-container{
-    background-image: url("/public/img/bg-blue.jpg");
+    background-image: url("/img/bg-blue.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
