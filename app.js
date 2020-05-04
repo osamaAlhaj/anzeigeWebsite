@@ -16,7 +16,8 @@ app.get("/api/entry", async function (req, res) {
         SELECT * FROM entry 
         WHERE DATEDIFF(NOW(),created)<=14
         ORDER BY created DESC
-        LIMIT 20`);
+        LIMIT 20 
+        `);
         res.json(result);
         console.log(result);
     }
