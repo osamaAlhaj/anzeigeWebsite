@@ -7,7 +7,9 @@ $(document).ready(() => {
     function showEntries(entries) {
         $('#tab-1').empty();
         for (const e of entries) {
-            const el = $('<div class="note-content-note-box"></div>');
+            const noteId = e.id;
+            console.log(noteId);
+            const el = $(`<div class="note-content-note-box" id=${noteId}></div>`);
             const name = $('<h3></h3>').text(e.title);
             //const dateString = new Date(e.created).toLocaleString();
             //const date = $('<time></time>', { datetime: e.created }).text(dateString);
@@ -48,7 +50,6 @@ $(document).ready(() => {
             const newEntries = await loadEntries();
             showEntries(newEntries);
         }
-        console.log(formData);
     });
 
 });
