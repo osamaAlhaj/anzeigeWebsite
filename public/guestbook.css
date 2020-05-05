@@ -152,7 +152,17 @@ button.note_input:hover{
     color: white;
     transition: 0.3s ease-in-out;
 }
-button.note_input{
+.button_note_input{
     padding: 20px;
     font-size: 1.3rem;
+    background-color: #00a591;
+    color: white;
+    border: none;
+}
+.button_note_input:hover{
+    cursor: pointer;
+}
+.button_note_input:active {
+    box-shadow: inset 5px 5px 8px rgba(184, 184, 184, 0.8),
+                inset -5px -5px 8px rgba(179, 179, 179, 0.8);
 }
