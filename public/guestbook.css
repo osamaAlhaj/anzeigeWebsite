@@ -114,6 +114,11 @@ h1 {
     width: 20%;
     margin: 5px;
 }
+.note-content-note-box:hover {
+ cursor: pointer;
+ scale: 1.02;
+ transition: 0.2s ease-in-out;
+}
 .note-input-container{
     display: none;
     justify-content: center;
@@ -130,10 +135,16 @@ h1 {
 }
 .note_input{
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 20px;
     border-radius: 2px;
+    font-size: 1.2em;
     border: none;
     box-shadow: 3px 3px 12px rgba(42,47,54,.3);
+}
+.note_input:focus{
+    scale: 1.1;
+    transition: 0.3s ease-in-out;
+    box-shadow: 3px 3px 12px rgba(0,165,145,.3);
 }
 button.note_input:hover{
     background-color: #00a591;
