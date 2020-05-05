@@ -30,8 +30,8 @@ app.post("/api/entry", async function(req, res) {
     try{
         const entry = req.body;
         await pool.query(
-            "INSERT INTO entry (name, text,title,location,price,email) VALUES (?, ?, ?, ?, ?, ?)",
-            [entry.name, entry.text, entry.title, entry.location, entry.price, entry.email]
+            "INSERT INTO entry (name, text,title,location,price,negotiable,email) VALUES (?, ?, ?,?, ?, ?, ?)",
+            [entry.name, entry.text, entry.title, entry.location, entry.price, entry.negotiable, entry.email]
         );
         res.status(201).end();
     }
