@@ -1,9 +1,19 @@
 body{
-    margin: 0;
+    margin-bottom: 100px;
     padding: 0;
     font-family: 'Baloo Tamma 2', cursive;
     color: #484848;
     background-color: #111F22;
+}
+.top-left-header{
+    margin-left: 100px;
+    margin-top: 15px;
+}
+#homepage-link{
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bolder;
 }
 .header-container{
     background-image: url("/img/abstract-art-black-background-blur-1040499.jpg");
