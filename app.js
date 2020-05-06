@@ -41,7 +41,7 @@ app.get("/api/entry/toplocations", async function (req, res) {
     }
 });
 
-app.get("/note-page.html", async function (req, res){
+app.get("/api/entry/ad", async function (req, res){
     try {
         const result = await pool.query (`
         SELECT * FROM entry WHERE id = ${req.query.id};
