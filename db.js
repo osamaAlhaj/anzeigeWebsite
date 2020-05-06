@@ -21,4 +21,5 @@ pool.query(`CREATE TABLE IF NOT EXISTS entry (
     process.exit();
   });
 
+
 module.exports = { pool };
